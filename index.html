@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="proj/LOGO.png.webp" class="logo" alt="HG Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer | Software Engineer</p>
+                <h1>Hi, I'm <span>Hawi</span> Girma</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="proj/about.png.JPG" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a front-end developer with a strong foundation in Python, Java, and C++. 
+                        Currently pursuing a Bachelor’s degree in Computer Science at Adama Science and Technology University.
+                        Certified in digital literacy and programming fundamentals from Ethio Coders, Udacity, and Dereja.com. 
+                        Actively engaged in problem-solving on platforms like Codeforces and LeetCode.
+                    </p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Designing web projects</li>
+                            <li><span>Front-End</span><br>Building user interfaces</li>
+                            <li><span>App Development</span><br>Creating Android & iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>2024</span><br>Digital Literacy Training (Dereja.com)</li>
+                            <li><span>2024</span><br>Programming Fundamentals (Udacity)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2024</span><br>Data Analysis (Udacity)</li>
+                            <li><span>2024</span><br>Android Development (Udacity)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>I build responsive websites using HTML, CSS, and JavaScript.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Front-End Development</h2>
+                <p>Creating visually appealing and user-friendly interfaces.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile"></i> <!-- Fixed App Development Icon -->
+                <h2>App Development</h2>
+                <p>Developing mobile apps for Android & iOS.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------portifolio----->
+<div id ="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+           
+            
+            <div class="work">
+                <img src="proj/work1.png.jpg" alt="Project 1">
+                <div class="layer">
+                    <h3>Chatbot Websites</h3> <!-- Fixed typo in "Chat Bot" -->
+                    <p>The websites are connected to the cloud and respond to users.</p>
+                    
+                    <a href="#" class="project-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
+                    </a> <!-- Added descriptive text -->
+                    </a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="proj/work2.png.jpg" alt="Project 2">
+                <div class="layer">
+                    <h3>Restaurant Order System</h3> <!-- Reworded description for clarity -->
+                    <p>The website helps modify the delivery system.</p> <!-- Fixed typo in "modifay" -->
+                  
+                    <a href="#" class="project-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
+                    </a> <!-- Added descriptive text -->
+                    </a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="proj/work3.png.webp" alt="Project 3">
+                <div class="layer">
+                    <h3>Student Management System</h3>
+                    <p>The website is connected to the network and helps students manage their academic issues.</p> <!-- Reworded description -->
+                  
+                    <a href="#" class="project-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
+                    </a> <!-- Added descriptive text -->
+                </div>
+            </div>
+            
+    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+    <script>
+        function openTab(tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-content");
+
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>

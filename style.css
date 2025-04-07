@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 140px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff004f;
+}
+
+/* Header */
+.header-text {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Increase font size of "Hi, I am Hawi Girma" */
+.header-text h1 {
+  font-size: 90px; /* Increased from 60px */
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Add more space between header and About Me section */
+/* Increase font size of "Hi, I am Hawi Girma" */
+#about {
+  padding: 120px 0;
+}
+
+/* Add more space between header and About Me section */
+#about {
+  padding-top: 150px; /* Increased padding from 80px */
+}
+ /* Increased padding from 80px */
+
+
+
+
+.header-text h1 span {
+  color: #ff004f;
+}
+
+/* About Section */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-col-1 img {
+  width: 320px; /* Increased from default (adjust as needed) */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+}
+
+
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.tab-title {
+  display: flex;
+  margin-top: 20px;
+}
+
+.tab-links {
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.tab-links.active-link {
+  color: #ff004f;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active-tab {
+  display: block;
+}
+
+/* Services */
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Adds spacing between the services */
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.5s,transform 0.5s;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  box-shadow: 0,4px 6px rgba(0, 0,0, 0.1);
+}
+
+.services-list div:hover {
+  background: #ff004f;
+}
+
+.services-list h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#header {
+  padding-bottom: 180px;
+}
+.header-text p {
+  font-size: 28px; /* Increased font size */
+  font-weight: 500;
+}
+.services-list div i {
+  font-size: 50px;  /* Make icons bigger */
+  margin-bottom: 30px;     /* Set color to black (or your preferred color) */
+  
+}
+
+.services-list i {
+  font-size: 50px; /* Increase icon size */
+  margin-bottom: 10px;
+  color: #333; /* Change icon color if needed */
+}
+.sub-title {
+  font-size: 36px; /* Increase "My Services" font size */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px; /* Add space below "My Services" */
+}
+/*---------portfolio-------*/
+#portfolio{
+  padding: 50px 0;
+}
+.work-list {
+  display: flex;
+  justify-content: center; /* Center the work items */
+  gap: 30px; /* Space between images */
+  flex-wrap: wrap; /* Ensure responsiveness */
+  margin-top: 40px;
+}
+.work {
+  flex: 1;
+  max-width: 350px; /* Set max width for uniformity */
+  text-align: center;
+  overflow: hidden; /* Hide extra parts of images */
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for a clean look */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative; /* Allow for absolute positioning of child elements */
+}
+
+.work img {
+  width: 100%; /* Ensure all images fit the container */
+  height: 220px; /* Keep a good rectangular aspect ratio */
+  object-fit: cover; /* Crop and resize images to fit without stretching */
+  border-radius: 12px;
+}
+
+.work:hover {
+  transform: scale(1.05); /* Smooth zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f); /* Gradient overlay */
+  border-radius: 12px; /* Rounded corners to match image corners */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px; /* Added padding for better spacing */
+  text-align: center;
+  color: #fff; /* White text for contrast */
+  opacity: 0; /* Hide layer by default */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for visibility */
+}
+
+.work:hover .layer {
+  opacity: 1; /* Show layer when hovering over work */
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #fff; /* White color for link */
+  font-size: 1.2em;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.project-link:hover {
+  color: #ff004f; /* Color change on hover */
+}
+
+.project-link i {
+  margin-right: 8px; /* Space between icon and text */
+}
