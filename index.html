@@ -1,182 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
 
-
-
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-<body>
+<!-- Navbar Section -->
+<header class="navbar">
+  <div class="logo">
+    <img src="proj/LOGO.png.webp" alt="HG Logo">
+  </div>
+  <div class="nav-links-container">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-    <!-- Header Section -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <img src="proj/LOGO.png.webp" class="logo" alt="HG Logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Web Developer | Software Engineer</p>
-                <h1>Hi, I'm <span>Hawi</span> Girma</h1>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="proj/about.png.JPG" alt="About Me">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        I am a front-end developer with a strong foundation in Python, Java, and C++. 
-                        Currently pursuing a Bachelor’s degree in Computer Science at Adama Science and Technology University.
-                        Certified in digital literacy and programming fundamentals from Ethio Coders, Udacity, and Dereja.com. 
-                        Actively engaged in problem-solving on platforms like Codeforces and LeetCode.
-                    </p>
-
-                    <div class="tab-title">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
-                    </div>
-
-                    <div class="tab-content active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Development</span><br>Designing web projects</li>
-                            <li><span>Front-End</span><br>Building user interfaces</li>
-                            <li><span>App Development</span><br>Creating Android & iOS apps</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-content" id="experience">
-                        <ul>
-                            <li><span>2024</span><br>Digital Literacy Training (Dereja.com)</li>
-                            <li><span>2024</span><br>Programming Fundamentals (Udacity)</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-content" id="education">
-                        <ul>
-                            <li><span>2024</span><br>Data Analysis (Udacity)</li>
-                            <li><span>2024</span><br>Android Development (Udacity)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
- <!-- Services Section -->
-<section id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Development</h2>
-                <p>I build responsive websites using HTML, CSS, and JavaScript.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>Front-End Development</h2>
-                <p>Creating visually appealing and user-friendly interfaces.</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-mobile"></i> <!-- Fixed App Development Icon -->
-                <h2>App Development</h2>
-                <p>Developing mobile apps for Android & iOS.</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
+<!-- Header Text Section -->
+<section id="header">
+  <div class="container">
+    <div class="header-text">
+      <p>Web Developer | Software Engineer</p>
+      <h1>Hi, I'm <span>Hawi</span> Girma</h1>
     </div>
+  </div>
 </section>
-<!---------portifolio----->
-<div id ="Portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-           
-            
-            <div class="work">
-                <img src="proj/work1.png.jpg" alt="Project 1">
-                <div class="layer">
-                    <h3>Chatbot Websites</h3> <!-- Fixed typo in "Chat Bot" -->
-                    <p>The websites are connected to the cloud and respond to users.</p>
-                    
-                    <a href="#" class="project-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                    </a> <!-- Added descriptive text -->
-                    </a>
-                </div>
-            </div>
-            
-            <div class="work">
-                <img src="proj/work2.png.jpg" alt="Project 2">
-                <div class="layer">
-                    <h3>Restaurant Order System</h3> <!-- Reworded description for clarity -->
-                    <p>The website helps modify the delivery system.</p> <!-- Fixed typo in "modifay" -->
-                  
-                    <a href="#" class="project-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                    </a> <!-- Added descriptive text -->
-                    </a>
-                </div>
-            </div>
-            
-            <div class="work">
-                <img src="proj/work3.png.webp" alt="Project 3">
-                <div class="layer">
-                    <h3>Student Management System</h3>
-                    <p>The website is connected to the network and helps students manage their academic issues.</p> <!-- Reworded description -->
-                  
-                    <a href="#" class="project-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                    </a> <!-- Added descriptive text -->
-                </div>
-            </div>
-            
-    
-                    </div>
-                </div>
-            </div>
-            
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="proj/background.png.jpg" alt="About Me" />
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>
+          I am a front-end developer with a strong foundation in Python, Java, and C++. Currently pursuing a
+          Bachelor’s degree in software engineering at Adama Science and Technology University. Certified in digital
+          literacy and programming fundamentals from Ethio Coders, Udacity, and Dereja.com. Actively engaged in
+          problem-solving on platforms like Codeforces and LeetCode.
+        </p>
+
+        <div class="tab-title">
+          <p class="tab-links active-link" onclick="openTab('skill')">Skill</p>
+          <p class="tab-links" onclick="openTab('experience')">Experience</p>
+          <p class="tab-links" onclick="openTab('education')">Education</p>
         </div>
+
+        <div class="tab-content active-tab" id="skill">
+          <ul>
+            <li><span>Web Development</span><br />Designing web projects</li>
+            <li><span>Front-End</span><br />Building user interfaces</li>
+            <li><span>App Development</span><br />Creating Android & iOS apps</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="experience">
+          <ul>
+            <li><span>2024</span><br />Digital Literacy Training (Dereja.com)</li>
+            <li><span>2024</span><br />Programming Fundamentals (Udacity)</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="education">
+          <ul>
+            <li><span>2024</span><br />Data Analysis (Udacity)</li>
+            <li><span>2024</span><br />Android Development (Udacity)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services Section -->
+<section id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Development</h2>
+        <p>I build responsive websites using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-crop-simple"></i>
+        <h2>Front-End Development</h2>
+        <p>Creating visually appealing and user-friendly interfaces.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-mobile"></i>
+        <h2>App Development</h2>
+        <p>Developing mobile apps for Android & iOS platforms.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-database"></i>
+        <h2>Database Design</h2>
+        <p>Designing and managing databases like MySQL, PostgreSQL, and MongoDB.</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-bug"></i>
+        <h2>Software Testing</h2>
+        <p>Conducting unit, integration, and end-to-end testing.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-diagram-project"></i>
+        <h2>System Architecture</h2>
+        <p>Designing scalable software systems.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-paintbrush"></i>
+        <h2>UI/UX Design</h2>
+        <p>Designing intuitive interfaces with Figma & Adobe XD.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-book"></i>
+        <h2>Documentation</h2>
+        <p>Creating user manuals, API docs, and guides.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Portfolio Section -->
+<section id="Portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+          <img src="proj/chat bot.png.jpg" alt="Project 1" />
+
+        <div class="layer">
+          <h3>Chatbot Websites</h3>
+          <p>The websites are connected to the cloud and respond to users.</p>
+          <a href="https://github.com/hawi3075/chatbot/tree/master" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="proj/work2.png.jpg" alt="Project 2" />
+        <div class="layer">
+          <h3>Restaurant Order System</h3>
+          <p>The website helps modify the delivery system.</p>
+          <a href="https://github.com/hawi3075/resturant-order-project" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="proj/work3.png.webp" alt="Project 3" />
+        <div class="layer">
+          <h3>Student Management System</h3>
+          <p>Helps students manage their academic issues.</p>
+          <a href="https://github.com/hawi3075/student-task-manegement/blob/master/user.java" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+
+  
+    <h1 class="sub-title">My Skills</h1>
+  
+      <div class="skills-icons">
+        <!-- Skills Icons -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="Git" width="60" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="60" />
+      </div>
+
+      <div class="skills-list">
+        <p><strong>Front-End:</strong> HTML, CSS, JavaScript, React, Angular</p>
+        <p><strong>Back-End:</strong> Node.js, Express, Python, Django</p>
+        <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</p>
+        <p><strong>Tools & Platforms:</strong> Git, Docker, AWS, Heroku</p>
+        <p><strong>Others:</strong> RESTful APIs, GraphQL, Agile Methodologies</p>
+      </div>
+      <section id="skills">
+        <div class="skills-container">
+          <div class="skill-bar">
+            <div class="skill-name">HTML</div>
+            <div class="progress-bar">
+              <div class="blue-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-bar">
+            <div class="skill-name">CSS</div>
+            <div class="progress-bar">
+              <div class="blue-bar" style="width: 85%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-bar">
+            <div class="skill-name">JavaScript</div>
+            <div class="progress-bar">
+              <div class="blue-bar" style="width: 80%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-bar">
+            <div class="skill-name">React</div>
+            <div class="progress-bar">
+              <div class="blue-bar" style="width: 75%;"></div>
+            </div>
+          </div>
+      
+          <div class="skill-bar">
+            <div class="skill-name">Node.js</div>
+            <div class="progress-bar">
+              <div class="blue-bar" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <h1 class="sub-title">Contact Me</h1>
+    <div class="contact-list">
+      <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> <a href="tel:+251921439372">0921439372</a></p>
+      <p><i class="fa-brands fa-telegram"></i> <strong>Telegram:</strong> <a href="https://t.me/ha_sware">@ha_sware</a></p>
+      <p><i class="fa-brands fa-instagram"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/hawi girma">hawi girma</a></p>
+      <p><i class="fa-brands fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/hawi3075">github.com/hawi3075</a></p>
+      <p><i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:</strong> Hawi Girma</p>
     </div>
 
-</div>
-    <script>
-        function openTab(tabname) {
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-content");
+    <div class="contact-info">
+      <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +251 921439372</p>
+    </div>
+  </div>
+</section>
 
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
+<!-- Contact Form Section -->
+<section id="contact">
+  <div class="container">
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Your Phone" required />
+      <input type="text" placeholder="Subject" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+<!-- JavaScript -->
+<script>
+  function openTab(tabname) {
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-content");
+
+    for (let tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    console.log("Navbar is loaded");
+
+  }
+
+</script>
 
 </body>
 </html>

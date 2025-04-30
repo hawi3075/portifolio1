@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,210 +9,294 @@
 body {
   background: #080808;
   color: #fff;
+  padding-top: 80px; /* Adjusted for fixed navbar */
 }
-
-.container {
-  width: 80%;
-  margin: auto;
-}
-
-nav {
+/* Navbar Main Styling */
+.navbar {
+  width: 100%;
+  height: 80px; /* Navbar height */
+  background-color: #111; /* Dark background */
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  padding: 0 50px; /* Space at sides */
+  position: fixed; /* Stick to top */
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo inside Navbar */
+.navbar .logo img {
+  width: 80px; /* Logo size */
+  height: auto;
+}
+
+/* Navigation Links Container */
+.nav-links-container {
+  display: flex;
   align-items: center;
-  padding: 20px 0;
+  height: 100%; /* Full height of navbar */
 }
 
-.logo {
-  width: 140px;
-}
-
-nav ul {
+.nav-links-container ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
 }
 
-nav ul li {
-  margin: 0 15px;
+.nav-links-container ul li {
+  margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links-container ul li a {
   text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: 0.3s;
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #ff004f;
+.nav-links-container ul li a:hover {
+  color: #ff69b4; /* Hover color */
 }
 
-/* Header */
-.header-text {
+
+
+/* Ensure the content isn't hidden behind the navbar */
+body {
+  margin-top: 80px; /* Adjust space for fixed navbar */
+}
+
+/* Mobile menu toggle button styles (Hamburger icon) */
+#mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links-container {
+    display: none; /* Hide navbar items on small screens */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar .nav-links-container ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar .nav-links-container.active {
+    display: flex; /* Show navbar items when active */
+  }
+
+  .navbar .nav-links-container ul li {
+    margin: 10px 0;
+  }
+
+  /* Show mobile menu toggle button on small screens */
+  #mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* To ensure the navbar shows above all content */
+body {
+  padding-top: 80px; /* This compensates for the navbar height */
+}
+
+
+/* Ensure content isn't hidden behind the navbar */
+body {
+  padding-top: 50px; /* Adjusted to match navbar height */
+}
+
+/* Header Section */
+#header {
   text-align: center;
   margin-top: 100px;
 }
 
-/* Increase font size of "Hi, I am Hawi Girma" */
 .header-text h1 {
-  font-size: 90px; /* Increased from 60px */
+  font-size: 60px; /* Adjusted for better responsiveness */
   font-weight: 700;
   margin-top: 20px;
 }
 
-/* Add more space between header and About Me section */
-/* Increase font size of "Hi, I am Hawi Girma" */
-#about {
-  padding: 120px 0;
+.header-text p {
+  font-size: 20px;
+  color: #6b8afd;
+  font-weight: 500;
 }
 
-/* Add more space between header and About Me section */
-#about {
-  padding-top: 150px; /* Increased padding from 80px */
+/* Section Titles */
+.sub-title {
+  text-align: center;
+  font-size: 32px;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
 }
- /* Increased padding from 80px */
-
-
-
-
-.header-text h1 span {
-  color: #ff004f;
-}
-
 /* About Section */
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.about-col-1 img {
-  width: 320px; /* Increased from default (adjust as needed) */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 15px;
-}
-
-
-
-.about-col-2 {
-  flex-basis: 60%;
-}
-
-.tab-title {
-  display: flex;
-  margin-top: 20px;
-}
-
-.tab-links {
-  margin-right: 20px;
-  cursor: pointer;
+#about {
+  padding: 120px 0 80px;  /* Adjusted padding to ensure proper visibility */
+  background-color: #080808;  /* Set the background to black */
+  color: #fff;  /* White text for contrast */
   font-size: 18px;
 }
 
-.tab-links.active-link {
-  color: #ff004f;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active-tab {
-  display: block;
-}
-
-/* Services */
-.services-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px; /* Adds spacing between the services */
+/* Title for About Me Section */
+#about .sub-title {
   text-align: center;
-  margin-top: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff004f;  /* Pink color for the title */
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Flex layout for About section content */
+#about .row {
+  display: flex;
+  justify-content: center;  /* Center the content */
+  align-items: center;
+  gap: 30px;  /* Space between image and text */
+  flex-wrap: wrap;  /* Ensure wrapping on smaller screens */
+}
+
+/* Adjust the columns */
+#about .about-col-1 {
+  flex-basis: 40%;  /* Set the image column width */
+}
+
+#about .about-col-2 {
+  flex-basis: 50%;  /* Adjust the text column width */
+  color: #ddd;  /* Light grey for readability */
+}
+
+#about .about-col-1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;  /* Rounded corners for the image */
+}
+
+/* About Me Heading */
+#about .about-col-2 h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff004f;  /* Pink color for the heading */
+  margin-bottom: 20px;
+}
+
+/* About Me Text */
+#about .about-col-2 p {
+  font-size: 18px;
+  color: #ddd;  /* Light grey color for paragraph text */
+  line-height: 1.6;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;  /* Consistent font */
+}
+
+/* Optional hover effect for About Me paragraph */
+#about .about-col-2 p:hover {
+  color: #ff004f;  /* Change color to pink on hover */
+  transition: color 0.3s ease;
+}
+
+/* Services Section Styling */
+#services {
+  padding: 60px 0;
+  background-color: #111;
+  margin-bottom: 50px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .services-list div {
-  background: #262626;
-  padding: 20px;
-  border-radius: 10px;
-  transition: background 0.5s,transform 0.5s;
-  font-size: 13px;
-  font-weight: 300;
-  border-radius: 10px;
-  box-shadow: 0,4px 6px rgba(0, 0,0, 0.1);
+  background-color: #1f1f1f;
+  padding: 10px 15px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  height: 200px;
+  word-wrap: break-word;
 }
 
 .services-list div:hover {
-  background: #ff004f;
-}
-
-.services-list h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-#header {
-  padding-bottom: 180px;
-}
-.header-text p {
-  font-size: 28px; /* Increased font size */
-  font-weight: 500;
-}
-.services-list div i {
-  font-size: 50px;  /* Make icons bigger */
-  margin-bottom: 30px;     /* Set color to black (or your preferred color) */
-  
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
 }
 
 .services-list i {
-  font-size: 50px; /* Increase icon size */
+  font-size: 30px;
+  color: #ff69b4;
   margin-bottom: 10px;
-  color: #333; /* Change icon color if needed */
 }
-.sub-title {
-  font-size: 36px; /* Increase "My Services" font size */
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 50px; /* Add space below "My Services" */
+
+.services-list h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
-/*---------portfolio-------*/
-#portfolio{
+
+.services-list p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+/* Portfolio Section */
+#portfolio {
   padding: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
 .work-list {
   display: flex;
-  justify-content: center; /* Center the work items */
-  gap: 30px; /* Space between images */
-  flex-wrap: wrap; /* Ensure responsiveness */
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
+
 .work {
   flex: 1;
-  max-width: 350px; /* Set max width for uniformity */
+  max-width: 350px;
   text-align: center;
-  overflow: hidden; /* Hide extra parts of images */
-  border-radius: 12px; /* Slightly rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for a clean look */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  position: relative; /* Allow for absolute positioning of child elements */
+  position: relative;
 }
 
 .work img {
-  width: 100%; /* Ensure all images fit the container */
-  height: 220px; /* Keep a good rectangular aspect ratio */
-  object-fit: cover; /* Crop and resize images to fit without stretching */
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
 .work:hover {
-  transform: scale(1.05); /* Smooth zoom effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .layer {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f); /* Gradient overlay */
-  border-radius: 12px; /* Rounded corners to match image corners */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 12px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -220,15 +305,15 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px; /* Added padding for better spacing */
+  padding: 20px;
   text-align: center;
-  color: #fff; /* White text for contrast */
-  opacity: 0; /* Hide layer by default */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition for visibility */
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .work:hover .layer {
-  opacity: 1; /* Show layer when hovering over work */
+  opacity: 1;
 }
 
 h3 {
@@ -243,16 +328,281 @@ p {
 
 .project-link {
   text-decoration: none;
-  color: #fff; /* White color for link */
+  color: #fff;
   font-size: 1.2em;
   display: inline-block;
   transition: color 0.3s ease-in-out;
 }
 
 .project-link:hover {
-  color: #ff004f; /* Color change on hover */
+  color: #ff004f;
 }
 
 .project-link i {
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px;
+}
+
+/* Skills Section */
+#skills {
+  padding: 100px 0;
+  background-color: #111;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.skills-icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills-icons img:hover {
+  transform: scale(1.2);
+}
+
+.skills-list p {
+  font-size: 16px;
+  line-height: 2;
+  color: #ddd;
+  font-size: 18px; /* Make text a little bigger */
+  margin-bottom: 10px;
+}
+.skills-list {
+  text-align: center; /* Center the text */
+  margin-top: 30px; /* Optional: add some space at the top */
+}
+.skills-list strong {
+  color: #ff004f;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #111;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact .container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-list p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.contact-list i {
+  color: #ff004f;
+  margin-right: 10px;
+}
+
+.contact-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: #ff004f;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: transparent;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ff69b4aa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(255, 105, 180, 0.05);
+  border-color: #ff69b4;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+.contact-form button {
+  background-color: #ff69b4;
+  color: #111;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e655a5;
+}
+/* General section styling */
+section {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+}
+
+/* General About Section Styling */
+#about {
+  background-color: #111;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-col-1 img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about-col-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-title {
+  font-size: 36px;
+  color: #ff004f;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tab-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-links {
+  margin: 0 20px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.tab-links:hover {
+  border-color: #ff004f;
+}
+
+.tab-links.active-link {
+  border-color: #ff004f;
+  color: #ff004f;
+}
+
+.tab-content {
+  display: none;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.tab-content.active-tab {
+  display: block;
+}
+
+.tab-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tab-content ul li {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.tab-content ul li span {
+  font-weight: bold;
+  color: #ff004f;
+}
+
+#skills {
+  width: 100%;
+  background: #111;
+  padding: 50px 0;
+}
+
+.skills-container {
+  width: 100%;
+  padding: 0 50px; /* small side padding */
+  box-sizing: border-box;
+}
+
+.skill-bar {
+  margin-bottom: 25px;
+}
+
+.skill-name {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 25px;
+  background-color: #333;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.blue-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  width: 90%; /* controlled by inline style */
+  border-radius: 15px 0 0 15px;
+}
+#skills .container {
+  max-width: 100%;
 }
