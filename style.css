@@ -606,3 +606,63 @@ p {
 #skills .container {
   max-width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+#mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-links-container {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #111;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links-container.active {
+    display: flex;
+  }
+
+  .nav-links-container ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links-container ul li {
+    margin: 10px 0;
+  }
+}
+
+
